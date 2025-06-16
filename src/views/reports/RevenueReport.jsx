@@ -226,7 +226,7 @@ import React, { useState, useEffect, useRef } from 'react';
     };
 
     // Check sudden changes (>20 million)
-    const getSuddenChanges = (data, key = 'revenue', thresholdAmount = 20000000) => {
+    const getSuddenChanges = (data, key = 'revenue', thresholdAmount = 200000000) => {
       if (!data || data.length < 2) return [];
       const changes = [];
       for (let i = 1; i < data.length; i++) {
